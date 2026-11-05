@@ -1,6 +1,7 @@
 import csv
 import random
 from IPython.display import clear_output
+from jam_sibuk import menu_jam_sibuk
 
 #Sistem Registrasi dan Login user, Shootout to Bryan Randle (@BryanJR) on Medium! -BatuNiisanDev 2026
 
@@ -55,11 +56,15 @@ while active:
         print('''
         1. Logout
         2. Quit
+        3. Jam Sibuk Saya
         ''')
     user_choice = input("Masukkan Input pilihan: ")
     user_choice = user_choice.lower()
 
-    if user_choice == "register" or user_choice == "2" and logged_in == False:
+    if user_choice == "3" and logged_in == True:    # Tambah Jam sibuk
+        nama = input("Konfirmasi username kamu: ")
+        menu_jam_sibuk(nama)
+    elif user_choice == "register" or user_choice == "2" and logged_in == False:
         registerUser()
     elif user_choice == "login" or user_choice == "1" and logged_in == False:
         logged_in = loginUser()
