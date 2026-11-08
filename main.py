@@ -1,6 +1,5 @@
 import csv
 import random
-import os
 from IPython.display import clear_output
 
 #Sistem Registrasi dan Login user, Shootout to Bryan Randle (@BryanJR) on Medium! -BatuNiisanDev 2026
